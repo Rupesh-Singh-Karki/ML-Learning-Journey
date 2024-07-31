@@ -25,7 +25,7 @@ np.linspace(0,10,3) #give array with three elements which will be evenly spaced 
 
 np.eye(4) #creates an identity matrix
 
-#rand - create an array of th egiven shape and populate it with random between 0 and 1
+#rand - create an array of the given shape and populate it with random between 0 and 1
 #distribution is uniform
 np.random.rand(2)
 np.random.rand(5,5)
