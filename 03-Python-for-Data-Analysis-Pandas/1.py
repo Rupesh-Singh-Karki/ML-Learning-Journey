@@ -25,7 +25,7 @@ pd.Series(data=my_list,index=labels) #or simply pd.Series(my_list,labels)
 # c    30
 # dtype: int64
 
-pd.Series(d)
+pd.Series(d) #converts a dictionary directly to a series . taking key as index and value as pair
 # a    10
 # b    20
 # c    30
