@@ -27,6 +27,6 @@ by_comp.min()
 by_comp.max()
 by_comp.count()
 by_comp.describe()
-# count mean std	min	25%	50%	75% max shows all these
+# count mean std	min	25%	50%	75% max (shows all these)
 by_comp.describe().transpose() #transpose lagane sai use woh vertical sai horizontal kardega
 by_comp.describe().transpose()['GOOG']

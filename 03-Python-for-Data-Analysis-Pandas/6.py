@@ -8,6 +8,10 @@ df.head()
 df['col2'].unique() #gives all the unique value at that col
 df['col2'].nunique() #number of unique
 df['col2'].value_counts()
+# 444    2
+# 555    1
+# 666    1
+# Name: col2, dtype: int64
 
 # Selecting Data
 
@@ -19,7 +23,7 @@ newdf = df[(df['col1']>2) & (df['col2']==444)]
 # Applying Functions
 def times2(x):
     return x*2
-df['col1'].apply(times2)
+df['col1'].apply(times2) #apply function in col1
 df['col3'].apply(len) #display lenth of each item in that col
 df['col1'].sum() #gives sum of all the element in that col
 

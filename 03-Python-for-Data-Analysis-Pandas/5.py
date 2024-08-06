@@ -18,7 +18,7 @@ df3 = pd.DataFrame({'A': ['A8', 'A9', 'A10', 'A11'],
 
 pd.concat([df1,df2,df3]) #does normal concatenation
 # Keep in mind that dimensions should match along the axis you are concatenating on
-pd.concat([df1,df2,df3],axis=1)
+pd.concat([df1,df2,df3],axis=1) #axis mtlb col
 # 	A	B	C	D	A	B	C	D	A	B	C	D
 # 0	A0	B0	C0	D0	NaN	NaN	NaN	NaN	NaN	NaN	NaN	NaN
 # 1	A1	B1	C1	D1	NaN	NaN	NaN	NaN	NaN	NaN	NaN	NaN
@@ -58,9 +58,9 @@ right = pd.DataFrame({'key1': ['K0', 'K1', 'K1', 'K2'],
                                   'D': ['D0', 'D1', 'D2', 'D3']})
 
 pd.merge(left, right, on=['key1', 'key2']) #default inner merge #intersection
-pd.merge(left, right, how='outer', on=['key1', 'key2']) #union
+pd.merge(left, right, how='outer', on=['key1', 'key2']) #union #nan for whatever information is not present
 pd.merge(left, right, how='right', on=['key1', 'key2']) #right + intersection
-pd.merge(left, right, how='left', on=['key1', 'key2'])
+pd.merge(left, right, how='left', on=['key1', 'key2']) #left and right is decided by the order it is put in
 
 #watch this video for merge concept
 # https://youtu.be/h4hOPGo4UVU?si=mhHA61vq9CEhnko8
@@ -75,4 +75,13 @@ right = pd.DataFrame({'C': ['C0', 'C2', 'C3'],
                       index=['K0', 'K2', 'K3'])
 
 left.join(right)
+# 	A	B	C	D
+# K0	A0	B0	C0	D0
+# K1	A1	B1	NaN	NaN
+# K2	A2	B2	C2	D2
 left.join(right, how='outer')
+# 	A	B	C	D
+# K0	A0	B0	C0	D0
+# K1	A1	B1	NaN	NaN
+# K2	A2	B2	C2	D2
+# K3	NaN	NaN	C3	D3
