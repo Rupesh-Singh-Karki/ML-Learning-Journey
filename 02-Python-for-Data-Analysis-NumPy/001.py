@@ -17,7 +17,7 @@ array0 = np.zeros((5,5)) #[[0. 0. 0. 0. 0.]
                         #  [0. 0. 0. 0. 0.]
                         #  [0. 0. 0. 0. 0.]]
 
-np.ones((5,5))
+np.ones((5,5)) #return a 2d array filled with 1
 
 #linespace returns evenly spaced number over a specified interval
 np.linspace(0,10,3) #give array with three elements which will be evenly spaced betweeen 0 and 10 inclusively
