@@ -75,10 +75,10 @@ right = pd.DataFrame({'C': ['C0', 'C2', 'C3'],
                       index=['K0', 'K2', 'K3'])
 
 left.join(right)
-# 	A	B	C	D
-# K0	A0	B0	C0	D0
-# K1	A1	B1	NaN	NaN
-# K2	A2	B2	C2	D2
+# 	   A	B	C	   D
+# K0	A0	B0	C0	  D0
+# K1	A1	B1	NaN  NaN
+# K2	A2	B2	C2	  D2
 left.join(right, how='outer')
 # 	A	B	C	D
 # K0	A0	B0	C0	D0

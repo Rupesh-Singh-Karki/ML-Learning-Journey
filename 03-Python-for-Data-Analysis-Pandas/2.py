@@ -72,7 +72,8 @@ df[df['W']>0]
 # B	0.651118	-0.319318	-0.848077	0.605965
 # D	0.188695	-0.758872	-0.933237	0.955057
 # E	0.190794	1.978757	2.605967	0.683509
-df[df['W']>0]['Y']
+df[df['W']>0]['Y'] #In summary, this function returns the values from column 'Y' 
+                   #for the rows where the values in column 'W' are greater than 0.
 # A    0.907969
 # B   -0.848077
 # D   -0.933237
@@ -155,6 +156,6 @@ df.index.names = ['Group','Num']
 
 # DataFrame.xs(key, axis=0, level=None, drop_level=True)
 df = pd.DataFrame(np.random.randn(6,2),index=hier_index,columns=['A','B'])
-df.xs('G1')
+df.xs('G1') #This will return all rows that belong to the 'G1' group from the first level of the MultiIndex
 df.xs(['G1',1])
 df.xs(1,level='Num')
